@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="Imagens/fora da caixa.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <style>
+        .custom-toggler .navbar-toggler-icon {
+            background-color: #178ca6;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: relative;
+        }
+        .custom-toggler .navbar-toggler-icon::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .custom-toggler .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .divider {
+            border-top: 2px solid #ccc;
+            margin: 30px 0;
+        }
+        footer {
+            background-color: #178ca6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .btn-color {
+          color: #178ca6;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Mover o botão para a esquerda -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Inserir uma imagem no meio da barra -->
+      <img src="Imagens/fora da caixa.png" alt="Logo" class="mx-auto" style="height: 80px;">
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Home.html" >Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Podcast.html">Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-color" href="SobreNós.html">Sobre Nós</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-color" href="" data-bs-toggle="dropdown">
+                  Literatura Brasileira
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item btn-color" href="LinhadoTempo.html">Linha do Tempo</a></li>
+                  <!-- Novo item adicionado -->
+                  <li><a class="dropdown-item btn-color" href="ValorizaçãoCultural.html">Valorização Cultural</a></li>
+              </ul>
+          </li>
+
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
+            <button class="btn-outline-success btn-color" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/Cordel.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>NORTE</h2>
+        <p>A literatura do Norte do Brasil é marcada por uma rica diversidade cultural e pela influência das particularidades regionais da Amazônia e do Norte do país. Essa literatura reflete a complexidade social, ambiental e histórica da região e evoluiu ao longo dos séculos com suas próprias características distintivas. Tem suas raízes na colonização portuguesa e nas interações com as culturas indígenas e afro-brasileiras. Nos primeiros períodos, as obras eram fortemente influenciadas pelas visões europeias e frequentemente abordavam a Amazônia de uma perspectiva exótica e colonial. Com o advento do modernismo, a literatura do Norte começou a refletir mais a realidade local e a identidade regional. Esse período é caracterizado por uma maior valorização da cultura amazônica e uma abordagem mais autêntica dos temas regionais. A selva amazônica e os rios são temas centrais na literatura do Norte, sendo descritos tanto como espaços ameaçadores quanto como fontes de beleza e vida. Contribui significativamente para o panorama da literatura brasileira, oferecendo uma perspectiva única sobre a região amazônica e suas complexidades. Os autores do Norte são reconhecidos por sua capacidade de capturar a essência da vida na Amazônia e por suas contribuições para uma compreensão mais profunda da diversidade cultural e ambiental do Brasil. 
+<br><br>
+          Autores: 
+          <br>
+          Jorge Andrade; 
+          <br>
+          Milton Hatoum. 
+          <br><br>
+          Obras: 
+          <br>
+          "O Homem e o Mar" (1964); 
+          <br>
+          "Relato de um Certo Oriente" (1989); 
+          <br>
+          "Dois Irmãos" (2000). </p>
+      </div>
+      <div class="col-md-6">
+        <img src="Imagens/cultura-norte-ceramica-marajoara.webp" class="img-fluid" alt="Imagem Descritiva">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-6">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+            <h2>NORDESTE</h2>
+            <p>Com o modernismo, a literatura nordestina passou a explorar mais intensamente a identidade regional e as realidades sociais do Nordeste. Durante este período, autores nordestinos começaram a utilizar uma linguagem mais local e a abordar temas como a seca, a vida rural e as desigualdades sociais. Na segunda metade do século XX, continuou a se expandir com a incorporação de novas tendências literárias e a valorização da cultura local. Esse período é marcado pela diversidade de estilos e temas, refletindo a complexidade da região. Tal literatura tem tido um impacto significativo na literatura brasileira como um todo, oferecendo uma visão única e valiosa da diversidade cultural e social do Brasil. Seus autores são reconhecidos por sua capacidade de capturar a essência da vida nordestina e por suas contribuições para a rica tapeçaria da literatura brasileira.  
+<br><br>
+              Autores: 
+              <br>
+              Graciliano Ramos; 
+              <br>
+              Jorge Amado; 
+              <br>
+              João Ubaldo Ribeiro; 
+              <br>
+              Conceição Ribeiro.                                                           
+              <br><br>
+              Obras: 
+              <br>
+              "Vidas Secas" (1938); 
+              <br>
+              "Capítulo de uma História de Amor" (1931); 
+              <br>
+              "Gabriela, Cravo e Canela" (1958); 
+              <br>
+              "Viva o Povo Brasileiro" (1984). </p>
+</div>
+              <div class="col-md-6">
+                <img src="Imagens/cordel-caracteristicas-regionais.webp" alt="Imagem Descritiva" class="img-fluid">
+            </div>
+    </div>
+</div>
+
+<br><br>
+<div class="container my-6">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+          <h2>CENTRO-OESTE</h2>
+          <p>A literatura do Centro-Oeste do Brasil, que inclui os estados de Goiás, Mato Grosso e Mato Grosso do Sul, é rica e diversificada, refletindo a singularidade da região e suas diversas influências culturais. A literatura do Centro-Oeste frequentemente reflete o universo do sertão, com temas ligados à vida rural, tradições indígenas e à cultura dos povos ribeirinhos e é comum encontrar elementos do folclore e das lendas locais. A presença de diversos grupos étnicos, como indígenas e afrodescendentes, enriquece a produção literária com perspectivas variadas e histórias singulares. Muitos escritores do Centro-Oeste exploram a vida no campo, a relação do homem com a terra e a cultura do sertanejo. A literatura contemporânea do Centro-Oeste está ganhando visibilidade, com novos autores explorando temas variados, desde questões urbanas até experimentações formais. Há uma crescente valorização das narrativas locais e das experiências vividas na região.
+          <br><br>
+          Autores: 
+<br>
+          José de Alencar; 
+          <br>
+          Carlos de Andrade; 
+          <br>
+          Cora Coralina; 
+          <br>
+          Cristovão Tezza; 
+          <br>
+          Jorge Amado. 
+          <br><br>
+          Obras: 
+          <br>
+          "O Filho Eterno" (2007); 
+          </p>
+
+</div>
+            <div class="col-md-6">
+              <img src="Imagens/procissao-fogareu-centrooeste" alt="Imagem Descritiva" class="img-fluid">
+          </div>
+  </div>
+</div>
+
+<br><br>
+
+<div class="container my-6">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+          <h2>SUDESTE</h2>
+          <p>A literatura do Sudeste do Brasil, composta pelos estados de São Paulo, Rio de Janeiro, Minas Gerais e Espírito Santo, é uma das mais influentes e diversificadas do país. A região, com seu dinamismo cultural e econômico, tem produzido uma vasta gama de obras e autores que refletem tanto a complexidade urbana quanto as tradições regionais. O Sudeste é conhecido por seu ambiente cosmopolita, principalmente nas grandes cidades como São Paulo e Rio de Janeiro, o que contribui para uma literatura variada e multifacetada, então a vida urbana, as questões sociais e os dilemas modernos são temas recorrentes na literatura da região, refletindo o dinamismo e as tensões das grandes cidades. Muitos autores da região contribuíram para o realismo e modernismo na literatura brasileira, refletindo as mudanças sociais e culturais do país. São Paulo, em particular, tem uma tradição forte na literatura infantil e juvenil, com autores que criam universos ricos e educativos para jovens leitores. A literatura contemporânea do Sudeste é marcada pela diversidade de estilos e temas. A influência global e a interconexão cultural são evidentes com muitos autores incorporando elementos internacionais e refletindo sobre o impacto da globalização no Brasil. 
+<br><br>
+            Autores: 
+            <br>
+            Machado de Assis; 
+            <br>
+            Monteiro Lobato; 
+            <br>
+            Carlos Drummond de Andrade; 
+            <br>
+            Adélia Prado; 
+            <br>
+            Rita Lee.  
+            <br><br>
+            Obras: 
+            <br>
+            "Dom Casmurro" (1899); 
+            <br>
+            "Memórias Póstumas de Brás Cubas" (1881); 
+            <br>
+            "Sítio do Picapau Amarelo" (1931); 
+            <br>
+            "Alguma Poesia” (1930); 
+            <br>
+            "A Rosa do Povo" (1945).  
+          </p>
+
+</div>
+            <div class="col-md-6">
+              <img src="Imagens/carlos-drummond-andrade.webp" alt="Imagem Descritiva" class="img-fluid">
+          </div>
+  </div>
+</div>
+
+<br><br>
+
+<div class="container my-6">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+          <h2>SUL</h2>
+          <p>A literatura do Sul do Brasil, que abrange os estados do Paraná, Santa Catarina e Rio Grande do Sul, é marcada por uma diversidade de influências culturais e tradições locais. A presença significativa de imigrantes europeus (principalmente italianos e alemães) influenciou profundamente a literatura da região. Muitos autores sulistas exploram temas relacionados à imigração, identidade cultural e a integração desses grupos na sociedade brasileira e frequentemente aborda a vida rural e as características naturais da região, incluindo as peculiaridades do clima e da geografia. A literatura contemporânea está em constante evolução, com novos autores explorando temas variados, desde questões sociais e políticas até experimentações estilísticas. O cenário literário do Sul continua a se diversificar, incorporando novas vozes e perspectivas. 
+            <br><br>
+            Autores: 
+            <br>
+            Simone de Beauvoir; 
+            <br>
+            Lúcio Cardoso; 
+            <br>
+            Manuel Bandeira; 
+            <br>
+            Erico Veríssimo; 
+            <br>
+            Cândido Rondon; 
+            <br>
+            Caio Fernando Abreu. 
+            <br><br>
+            Obras: 
+            <br>
+            "Libertinagem" (1930); 
+            <br>
+            "O Tempo e o Vento" (1949); 
+            <br>
+            "Morangos Mofados" (1982). 
+          </p>
+
+</div>
+            <div class="col-md-6">
+              <img src="Imagens/duas-cuias-de-chimarrao-bebida-tipica-da-regiao-sul-do-brasil.webp" alt="Imagem Descritiva" class="img-fluid">
+          </div>
+  </div>
+</div>
+
+  <footer>
+    <div class="container text-center">
+      <p class="mb-0">© 2024 Sua Empresa. Todos os direitos reservados.</p>
+      <p class="mb-0">
+        <a href="#">Política de Privacidade</a> | 
+        <a href="#">Termos de Serviço</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

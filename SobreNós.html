@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="Imagens/fora da caixa.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+
+      
+
+        .custom-toggler .navbar-toggler-icon {
+            background-color: #178ca6;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: relative;
+        }
+        .custom-toggler .navbar-toggler-icon::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .custom-toggler .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .divider {
+            border-top: 2px solid #ccc;
+            margin: 30px 0;
+        }
+        footer {
+            background-color: #178ca6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #178ca6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 6px;
+            position: relative;
+            width: 45%;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #178ca6;
+            border-radius: 50%;
+            top: 20px;
+            left: -7.5px;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            transform: translateX(50%);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: auto;
+            right: -7.5px;
+        }
+
+        .timeline-item .date {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #178ca6;
+        }
+
+        .timeline-item .desc {
+            margin-top: 10px;
+        }
+
+        .timeline-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+        .btn-color {
+          color: #178ca6;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Mover o botão para a esquerda -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Inserir uma imagem no meio da barra -->
+      <img src="Imagens/fora da caixa.png" alt="Logo" class="mx-auto" style="height: 80px;">
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Home.html" >Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Podcast.html">Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-color" href="SobreNós.html">Sobre Nós</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-color" href="" data-bs-toggle="dropdown">
+                  Literatura Brasileira
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item btn-color" href="LinhadoTempo.html">Linha do Tempo</a></li>
+                  <!-- Novo item adicionado -->
+                  <li><a class="dropdown-item btn-color" href="ValorizaçãoCultural.html">Valorização Cultural</a></li>
+              </ul>
+          </li>
+
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
+            <button class="btn-outline-success btn-color" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/Sobre Nos.png" class="d-block w-100" alt="...">
+      </div>
+  </div>
+
+
+
+ <!-- TEXTO INTRODUTÓRIO -->
+ <div class="container mt-4 text-center">
+  <h1>BEM-VINDOS AO BRASIL FORA DA CAIXA!</h1>
+  <p>Sua plataforma de estudos dedicada a transformar a aprendizagem em uma experiência enriquecedora e acessível. Fundado por um grupo de estudantes apaixonados pela literatura, nosso objetivo é oferecer recursos educacionais promovendo a inclusão a diversidade de aprendizagem.
+<br>
+    Aqui, acreditamos que a educação é a chave para o sucesso e, por isso, oferecemos uma vasta gama de materiais didáticos, Podcast, Linha do tempo e ferramentas de estudo adaptadas às suas necessidades. Nossa equipe de estudantes está constantemente atualizando e expandindo nossos conteúdos para garantir que você tenha acesso às informações mais recentes e relevantes.
+    <br>
+    No Brasil Fora da Caixa, estamos comprometidos com a excelência educacional e com o seu progresso. Seja você um estudante, um profissional em busca de aprimoramento ou alguém interessado em novos conhecimentos, estamos aqui para apoiar sua jornada de aprendizado com dedicação e qualidade. Junte-se a nós e descubra como podemos ajudar você a alcançar seus objetivos 😉</p>
+
+<!-- Container com Texto à Esquerda e Vídeo à Direita -->
+<div class="container my-5">
+  <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1>O QUE DIZEM SOBRE NÓS?</h1>
+        <p>Essa parte é dedicada a você dar a sua opinião e experiência com o nosso site, através do seu feedback podemos aprimorar o Brasil Fora da Caixa atendendo as suas necessidades.</p>
+      </div>
+      <div class="col-md-6">
+          <div class="video-responsive">
+              <video controls class="w-100" style="max-width: 100%; height: auto;">
+                  <source src="Imagens/Praia.mp4" type="video/mp4">
+                  Seu navegador não suporta o elemento de vídeo.
+              </video>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Adicionando os Cards Centralizados -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="Imagens/julacerda.png" class="card-img-top" alt="Imagem 1">
+              <div class="card-body">
+                  <h5 class="card-title">Júlia Lacerda</h5>
+                  <p class="card-text">Designer e Pesquisadora</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="Imagens/jumelo.png" class="card-img-top" alt="Imagem 2">
+              <div class="card-body">
+                  <h5 class="card-title">Júlia Melo</h5>
+                  <p class="card-text">Designer e Pesquisadora</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card">
+              <img src="Imagens/Gabi.png" class="card-img-top" alt="Imagem 3">
+              <div class="card-body">
+                  <h5 class="card-title">Maria Gabriela</h5>
+                  <p class="card-text">Designer e Programadora</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Rodapé -->
+<footer>
+  <div class="container text-center">
+    <p class="mb-0">© 2024 Sua Empresa. Todos os direitos reservados.</p>
+    <p class="mb-0">
+      <a href="#">Política de Privacidade</a> | 
+      <a href="#">Termos de Serviço</a>
+    </p>
+  </div>
+</footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Integrador</title>
+  <link rel="stylesheet" href="Imagens/fora da caixa.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <style>
+    .custom-toggler .navbar-toggler-icon {
+      background-color: #178ca6;
+      border-radius: 4px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .custom-toggler .navbar-toggler-icon::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 6px;
+      width: 18px;
+      height: 2px;
+      background-color: white;
+      display: block;
+    }
+
+    .custom-toggler .navbar-toggler-icon::after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 6px;
+      width: 18px;
+      height: 2px;
+      background-color: white;
+      display: block;
+    }
+
+    .divider {
+      border-top: 2px solid #ccc;
+      margin: 30px 0;
+    }
+
+    footer {
+      background-color: #178ca6;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #178ca6;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 6px;
+      position: relative;
+      width: 45%;
+      margin: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #178ca6;
+      border-radius: 50%;
+      top: 20px;
+      left: -7.5px;
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      transform: translateX(50%);
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: auto;
+      right: -7.5px;
+    }
+
+    .timeline-item .date {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #178ca6;
+    }
+
+    .timeline-item .desc {
+      margin-top: 10px;
+    }
+
+    .timeline-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+
+    .btn-cor {
+      background-color: #178ca6;
+      color: aliceblue;
+    }
+
+    .btn-color {
+      color: #178ca6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Mover o botão para a esquerda -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Inserir uma imagem no meio da barra -->
+      <img src="Imagens/fora da caixa.png" alt="Logo" class="mx-auto" style="height: 80px;">
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Podcast.html">Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  btn-color" href="SobreNós.html">Sobre Nós</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  btn-color" href="" data-bs-toggle="dropdown">
+                Literatura Brasileira
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item  btn-color" href="LinhadoTempo.html">Linha do Tempo</a></li>
+                <!-- Novo item adicionado -->
+                <li><a class="dropdown-item  btn-color" href="ValorizaçãoCultural.html">Valorização Cultural</a></li>
+              </ul>
+            </li>
+
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
+            <button class="btn btn-outline-success btn-color" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/Literatura.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+
+
+
+
+
+
+    <h1>LINHA DO TEMPO</h1>
+
+    <!--MODAL-->
+
+    <!-- MODAL HUMANISMO -->
+    <div class="modal fade" id="teste" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Humanismo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Introdução</h1>
+            <p>O Humanismo é um movimento literário, filosófico e artístico de transição entre o
+              Trovadorismo e o Classicismo que marcou o fim da Idade Média e início da Idade
+              Moderna na Europa. Nesse sentido, com foco na valorização do homem, esse
+              movimento permitiu compreender melhor o mundo e o ser-humano, deixando de lado
+              o teocentrismo e trazendo à tona o antropocentrismo. </p>
+            <h1>Contexto Histórico</h1>
+            <p>A época do humanismo, também conhecido como humanismo renascentista, foi um
+              momento de importantes transformações na <b>mentalidade europeia</b>. Alguns fatores
+              que permitiram surgir uma nova visão no ser humano foram:
+              <br><br>
+              - Invenção da imprensa de Johannes Gutenberg- Expandiu o conhecimento, antes
+              controlado pela igreja.
+              <br>
+              - Grandes navegações e a expansão marítima europeia: Ampliou os horizontes do
+              homem europeu.
+              <br>
+              - Crise do sistema feudal: Diversas atividades comerciais desabrocharam, dando
+              início ao mercantilismo e o uso de moedas de troca (dinheiro).
+              <br>
+              - Burguesia: Nova classe social, que se consolidou com a expansão do comércio e
+              o desenvolvimento das cidades medievais.
+              <br><br>
+              Todas essas mudanças foram necessárias para questionar os velhos valores num
+              impasse desenvolvido <b>entre a fé a razão</b>.
+              </p>
+              <h1>Principais Autores</h1>
+            <p>Gil Vicente (pai do teatro português);
+              <br>
+              Francesco Petrarca;
+              <br>
+              Dante Alighieri;
+              <br>
+              Giovanni Bocaccio;
+              <br>
+              Erasmo Roterdã;
+              <br>
+              Fernão Lopes;
+              <br>
+              Michel Montaigne.
+            </p>
+            <h1>Produção Literária</h1>
+            <p>Teatro popular (em destaque o TEATRO VICENTINO, composto
+              por uma crítica social aos valores da igreja), poesia palaciana e crônica histórica
+              (registro das navegações).</p>
+            <h1>Principais Características</h1>
+            <p>Teocentrismo x Antropocentrismo;
+              <br>
+              Separação entre a música e a poesia;
+              <br>
+              Cientificismo;
+              <br>
+              Descrição da figura humana (inclusive a mulher), suas expressões, detalhes e
+              proporções;
+              <br>
+              Descoberta da natureza, dos campos, das florestas, das montanhas,
+              considerados refúgios para as mágoas do amor;
+              <br>
+              Descentralização do conhecimento, até então controlado pela Igreja Católica;
+              Apoio aos valores cristãos e medievais X Teatro vicentino (sátira de Gil Vicente
+              sobre os valores católicos)
+            </p>
+            <div><img src="Imagens/Cards/cardhumanismo1.png" class="d-block w-100" alt="..."></div>
+            <div><img src="Imagens/Cards/cardhumanismo2.png" class="d-block w-100" alt="..."></div>
+            <div><img src="Imagens/Cards/cardhumanismo3.png" class="d-block w-100" alt="..."></div>
+            <div><img src="Imagens/Cards/cardhumanismo4.png" class="d-block w-100" alt="..."></div>
+          </div>
+
+          <a href="Exercícios/Questões Humanismo (1) (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL CLASSISMO-->
+    <div class="modal fade" id="teste2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Classicismo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Contexto Histórico</h1>
+            <p>O Classicismo surge no século XVI, em meio ao Renascimento, com um forte retorno aos ideais greco-romanos de equilíbrio, harmonia e racionalidade. Em Portugal, foi influenciado pela expansão marítima e a ascensão cultural da burguesia.</p>
+            <h1>Principais características</h1>
+          <p>
+            Racionalismo e equilíbrio: Valorização da razão e da lógica na composição literária.</p>
+           <p> Antropocentrismo: Foco no ser humano, em oposição ao teocentrismo medieval. </p>
+
+            <p>Ideal de beleza: Harmonia e proporção na linguagem e nas formas literárias. </p>
+
+            <p>Universalismo: Temas que buscam o universal, com foco na perfeição e na verdade. </p>
+            
+            <h1>Temas comuns:</h1>
+
+            <p>Amor, mitologia, natureza e o ser humano, muitas vezes idealizados.</p>
+            <p> Busca pela perfeição e controle das paixões, fugindo dos exageros.</p>
+            <p>Reflexão sobre o conhecimento, inspirado nos clássicos gregos e romanos.</p>
+
+            <h2>Gêneros literários:</h2>
+
+            <p>Poesia épica: Exemplo notável é Os Lusíadas (1572), de Luís de Camões, obra que celebra as conquistas portuguesas e a expansão ultramarina.</p>
+            <p>Poesia lírica: Cultiva formas como o soneto, com temas de amor e o conflito entre razão e paixão.</p>
+            <p>Prosa: Surge também em tratados e cartas, influenciada pela filosofia renascentista.</p>
+            
+<h1>Principais autores:</h1>
+<p>Luís de Camões: Principal expoente do Classicismo em Portugal, com destaque para Os Lusíadas e seus sonetos.</p>
+<p>Francisco de Sá de Miranda: Introduziu o soneto e outras formas poéticas italianas na literatura portuguesa.</p>
+
+<h2>Influência do Renascimento:</h2>
+
+<p>Grande influência dos valores renascentistas, buscando inspiração na cultura e nos textos clássicos (gregos e romanos).</p>
+
+
+<a href="Exercícios/Questões Classicismo (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL ARCADISMO-->
+    <div class="modal fade" id="teste3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Arcadismo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Contexto histórico</h1>
+  <p>O Arcadismo surge no século XVIII, em pleno Iluminismo, período que valoriza a razão e o progresso científico.</p>
+  <p>Em Portugal, esse movimento coincide com o auge e decadência do ciclo do ouro, influenciando a vida cultural na colônia brasileira.
+  </p>
+  <h2>Características principais:</h2>
+  <p>Valorização da natureza: Busca pela simplicidade e o retorno à vida no campo, vista como ideal e pura.</p>
+  <p>Pastoralismo: Uso de personagens bucólicos, como pastores e pastoras, que simbolizam a vida tranquila no campo.</p>
+  <p>Fugere urbem: Fuga das complicações da vida urbana e da artificialidade, em direção à vida rural.</p>
+  <p>Locus amoenus: Idealização de uma paisagem perfeita e harmoniosa, inspirada na natureza.</p>
+  <p>Exaltação do equilíbrio e da simplicidade: Rejeição dos excessos do Barroco, buscando uma linguagem clara e moderada.</p>
+
+              <a href="Exercícios/Questões Arcadismo (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL REALISMO-->
+    <div class="modal fade" id="teste4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Realismo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Introdução</h1>
+            <p>Este é o conteúdo da segunda modal. Pode ser um texto longo que necessita de rolagem para ser lido
+              completamente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula est sit amet enim
+              fermentum, ac tincidunt justo egestas. Integer bibendum libero in diam cursus, id aliquam turpis
+              bibendum. Morbi at dapibus orci, non sagittis enim.</p>
+            <p>Aenean vitae diam vitae ligula feugiat ultrices. Proin accumsan nisl et est tincidunt convallis.
+              Praesent imperdiet ex a nisi finibus, vel volutpat dui gravida. Sed non ex at nisl laoreet commodo.
+            </p>
+            <p>Curabitur vitae tortor vel erat gravida aliquam sit amet a nunc. Phasellus viverra lorem nulla, id
+              condimentum justo pharetra et. Fusce congue ac leo sit amet pharetra. Donec varius velit ac felis
+              fermentum efficitur.</p>
+            <p>Nulla facilisi. Proin ut felis in augue eleifend lobortis. Mauris laoreet turpis sed libero
+              hendrerit, nec tempor metus luctus. Aliquam erat volutpat. Fusce ac lectus at purus aliquam vulputate.
+            </p>
+            <p>Nam ac tristique nulla, in ornare nisl. Quisque vehicula turpis non nunc convallis, sit amet viverra
+              eros ullamcorper. Nulla consequat metus velit, non dignissim erat efficitur ac. Duis non risus a enim
+              varius aliquet.</p>
+
+              <a href="Exercícios/Questões Realismo (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL PARNASIANISMO-->
+    <div class="modal fade" id="teste5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Parnasianismo/Simbolismo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Introdução</h1>
+            <p>Este é o conteúdo da segunda modal. Pode ser um texto longo que necessita de rolagem para ser lido
+              completamente.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula est sit amet enim
+              fermentum, ac tincidunt justo egestas. Integer bibendum libero in diam cursus, id aliquam turpis
+              bibendum. Morbi at dapibus orci, non sagittis enim.</p>
+            <p>Aenean vitae diam vitae ligula feugiat ultrices. Proin accumsan nisl et est tincidunt convallis.
+              Praesent imperdiet ex a nisi finibus, vel volutpat dui gravida. Sed non ex at nisl laoreet commodo.
+            </p>
+            <p>Curabitur vitae tortor vel erat gravida aliquam sit amet a nunc. Phasellus viverra lorem nulla, id
+              condimentum justo pharetra et. Fusce congue ac leo sit amet pharetra. Donec varius velit ac felis
+              fermentum efficitur.</p>
+            <p>Nulla facilisi. Proin ut felis in augue eleifend lobortis. Mauris laoreet turpis sed libero
+              hendrerit, nec tempor metus luctus. Aliquam erat volutpat. Fusce ac lectus at purus aliquam vulputate.
+            </p>
+            <p>Nam ac tristique nulla, in ornare nisl. Quisque vehicula turpis non nunc convallis, sit amet viverra
+              eros ullamcorper. Nulla consequat metus velit, non dignissim erat efficitur ac. Duis non risus a enim
+              varius aliquet.</p>
+
+
+              <a href="Exercícios/Questões ParnasianismoSimbolismo (1) (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FINAL TESTE-->
+
+
+
+    <section class="timeline">
+      <div class="timeline-item">
+
+        <div class="desc">
+          <h3>Trovadorismo</h3>
+          <p><I>Cantar, Amar, Saudar</I></p>
+          <img src="Imagens/Trovadorismo.png" alt="Logo do SENAI">
+        </div>
+
+        <!-- Botão para abrir a segunda modal -->
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#modal1">
+            Saiba mais
+          </button>
+        </div>
+        <!-- Segunda Modal (Verticalmente centralizada e rolável) -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Trovadorismo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>Introdução</h1>
+                <p>Trovadorismo foi um movimento poético-musical que se desenvolveu na Europa, no período medieval. Os
+                  poemas eram escritos em forma de cantigas líricas ou satíricas. </p>
+                <h1>Contexto histórico</h1>
+                <p>Perpassa na era feudal, na qual a forma de poder era as propriedades (Terras), sendo muito presente
+                  as guerras, invasões e conflitos em busca de território. Portanto, se tornou proveniente a relação de
+                  suserania e vassalagem, na qual consiste no Senhor Feudal oferecer proteção e território aos seus
+                  suseranos em troca de bens de consumo: Cultivar, fiar, forjar armas etc. </p>
+                <h1>Principais autores</h1>
+                <p>Diogo Brandão;
+                  <br>
+                  Aires Teles;
+                  <br>
+                  Conde Vimioso.
+                </p>
+                <h1>Produção Literária</h1>
+                <p>Cantigas.</p>
+                <h1>Principais Características</h1>
+                <p>Cantigas Cantadas (Feudalismo- Literatura medieval)
+                  <br>
+                  Existem 3 tipos de cantigas:
+                  <br><br>
+                  AMOROSA:
+                  <br>
+                  Cavaleiro declara amor e coita à dama
+                  <br>
+                  Donzela é inatingível e idealizada, símbolo de beleza e nobreza (classe social);
+                  <br>
+                  Vassalagem amorosa
+                  <br>
+                  Erudita
+                  <br>
+                  Eu-lírico: Masculino
+                  <br><br>
+                  AMIGOS:
+                  <br>
+                  Vocativo: Natureza (ambiente descrito nas cantigas de amigo não é mais a corte, e sim, a zona rural)
+                  <br>
+                  Tema: Saudade
+                  <br>
+                  Ambiente campestre (mulheres camponesas, característica que reflete a relação dos nobres com as
+                  plebeias)
+                  <br>
+                  Linguagem Coloquial/Simples
+                  <br>
+                  Eu - lírico: Feminino (mulher com saudade do homem que partiu em navegação) - no entanto, seus autores
+                  são homens, uma vez que somente os homens tinham acesso à educação.
+                  <br><br>
+                  SATÍRICAS:
+                  <br>
+                  Escárnio (crítica indireta e irônica) e Mal Dizer (críticas mais diretas e grosseiras)
+                  <br>
+                  Crítica: pessoa (comportamento/físico)
+                  <br>
+                  Sociedade
+                  <br>
+                  Palácio: Cidade, ironia, sarcasmo
+                </p>
+                <div><img src="Imagens/Cards/cardtrovadorismo1.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/Cards/cardtrovadorismo2.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/Cards/cardtrovadorismo3.png" class="d-block w-100" alt="..."></div>
+                <br><br>
+
+                <p><a
+                    href="https://brasilescola.uol.com.br/literatura/trovadorismo.htm">https://brasilescola.uol.com.br/literatura/trovadorismo.htm</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://www.educamaisbrasil.com.br/enem/lingua-portuguesa/caracteristicas-do-trovadorismo">https://www.educamaisbrasil.com.br/enem/lingua-portuguesa/caracteristicas-do-trovadorismo</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://www.todamateria.com.br/cantigas-trovadorescas/#:~:text=As%20cantigas%20de%20amigo%20originam,o%20eu%20l%C3%ADrico%20%C3%A9%20masculino">https://www.todamateria.com.br/cantigas-trovadorescas/#:~:text=As%20cantigas%20de%20amigo%20originam,o%20eu%20l%C3%ADrico%20%C3%A9%20masculino</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://www.todamateria.com.br/movimentos-literarios/">https://www.todamateria.com.br/movimentos-literarios/</a>
+                </p>
+                <br>
+
+                <a href="Exercícios/Questões Trovadorismo (2) (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Humanismo</h3>
+          <p><I>Raciocinar, Cientificar e Valorizar o Ser Humano</I></p>
+          <img src="Imagens/Humanismo.png" alt="Logo Antigo">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#teste">
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Quinhentismo</h3>
+          <p><I>Instruir, Informar, Catequisar</I></p>
+          <img src="Imagens/5.png" alt="Lançamento do Projeto">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#modal3">
+            Saiba Mais
+          </button>
+        </div>
+        <!-- Segunda Modal (Verticalmente centralizada e rolável) -->
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Quinhentismo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>Introdução</h1>
+                <p>O Quinhentismo (1500 a 1601), está inserido no contexto das Grandes Navegações e da Contrarreforma
+                  Católica. É caracterizado pela literatura de informação (relatório) e a literatura Catequética,
+                  apresentando os primeiros textos elaborados no Brasil ou sobre o território brasileiro, sejam eles
+                  informativos ou de caráter catequizante. Vale lembrar que o Quinhetismo é considerado o 1° movimento
+                  literário no Brasil, no e entanto, começa a ser falado de literatura somente no período literário
+                  “Barroco”. </p>
+                <h1>Contexto Histórico</h1>
+                <p>Seu marco inicial é a colonização portuguesa no Brasil (dominação do território e dos nativos). Dessa
+                  forma, o Estado português e a Igreja Católica (dominadores), são perceptíveis a partir das produções
+                  literárias do período.</p>
+                <h1>Produção Literária</h1>
+                <p>Crônicas de viagem, literatura de informação (relatórios) e literatura Jesuítica/catequética.</p>
+                <h1>Principais Características</h1>
+                <p>Chegada dos Portugueses no Brasil;
+                  <br>
+                  “Relatórios” sobre o que viam/impressões da fauna/flora e dos povos indígenas;
+                  <br>
+                  Carta de Pedro Vaz de Caminha;
+                  <br>
+                  Conquista material e espiritual;
+                  <br>
+                  Caráter documental e religioso;
+                  <br>
+                  Exaltação a Terra;
+                  <br>
+                  Textos descritivos e informativos;
+                  <br>
+                  Utilização de adjetivos;
+                  <br>
+                  Linguagem simples e objetiva;
+                  <br>
+                  Entendimento do homem europeu e seu ponto de vista.
+                </p>
+                <h1>Principais autores</h1>
+                <p>Pedro Vaz de Caminha;
+                  <br>
+                  Hans Staden;
+                  <br>
+                  Padre Manuel da Nóbrega;
+                  <br>
+                  Padre José de Anchieta.
+                </p>
+
+                <div><img src="Imagens/cardquinhentismo1.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardquinhentismo3.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardquinhentismo2.png" class="d-block w-100" alt="..."></div>
+
+                <br> <br>
+                <p><a
+                    href="https://www.portugues.com.br/literatura/quinhentismo.html#:~:text=Quinhentismo%20%C3%A9%20um%20per%C3%ADodo%20da,Navega%C3%A7%C3%B5es%20e%20da%20Contrarreforma%20Cat%C%B3lica">https://www.portugues.com.br/literatura/quinhentismo.html#:~:text=Quinhentismo%20%C3%A9%20um%20per%C3%ADodo%20da,Navega%C3%A7%C3%B5es%20e%20da%20Contrarreforma%20Cat%C%B3lica</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://www.todamateria.com.br/quinhentismo/#:~:text=O%20Quinhentismo%20representa%20a%20primeira,com%20caracter%C3%ADsticas%20informativas%20e%20descritivas">https://www.todamateria.com.br/quinhentismo/#:~:text=O%20Quinhentismo%20representa%20a%20primeira,com%20caracter%C3%ADsticas%20informativas%20e%20descritivas</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://mundoeducacao.uol.com.br/literatura/quinhentismo-no-brasil.htm#:~:text=O%20context0%20hist%C3%B3rico%20do%20Quinhentismo,das%20produ%C3%A7%C3%B5es%20liter%C3%A1rias%20do%20per%C3%ADodo">https://mundoeducacao.uol.com.br/literatura/quinhentismo-no-brasil.htm#:~:text=O%20context0%20hist%C3%B3rico%20do%20Quinhentismo,das%20produ%C3%A7%C3%B5es%20liter%C3%A1rias%20do%20per%C3%ADodo</a>
+                </p>
+
+                <a href="Exercícios/Questões Quinhentismo (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Classicismo</h3>
+          <p><I>Harmonizar, Equilibrar, Aperfeiçoar</I></p>
+          <img src="Imagens/4.png" alt="Lançamento do Projeto">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#teste2">
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="timeline-item">
+
+        <div class="desc">
+          <h3>Barroco</h3>
+          <p><I>Contrastar, Opor, Exagerar</I></p>
+          <img src="Imagens/6.png" alt="Planejamento Escolar">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#modal5">
+            Saiba Mais
+          </button>
+        </div>
+        <!-- Segunda Modal (Verticalmente centralizada e rolável) -->
+        <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Barroco</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>Introdução</h1>
+                <p>O Barroco é um estilo que dominou a arquitetura, a pintura, a literatura e a música na Europa do
+                  século XVII. Dessa forma, na literatura é caracterizado por forte influência religiosa, devido ao
+                  contexto histórico marcado pela Reforma Protestante e Contrarreforma, e contradizendo com um forte
+                  apelo aos prazeres sensoriais.</p>
+                <h1>Contexto Histórico</h1>
+                <p>Ocorre no final do renascimento, essencialmente a Reforma Protestante e da Contrarreforma Católica
+                  são os principais marcos históricos da época, refletindo na literatura aspectos como a dualidade:
+                  Forte influência religiosa e forte apelo aos prazeres sensoriais.
+                  <br>
+                  Nesse sentido, ao analisar a realidade brasileira, sob época do Brasil colonial, a economia era
+                  baseada na produção escrava de cana-de-açúcar. Não havia ainda uma ideia de Brasil como nação, a
+                  identidade do país estava em construção. A principal influência cultural era portuguesa. Nesse
+                  sentido, o catolicismo estava vigente no Brasil, enquanto a Europa passava pela dualidade religiosa
+                  (Catolicismo X Protestantismo).
+                </p>
+                <h1>Produção Literária</h1>
+                <p>Prosa e Poesia.</p>
+                <h1>Principais Autores</h1>
+                <p>Bento Teixeira;
+                  <br>
+                  Gregório de Matos (crítica social (ao clero e reis) em seus poemas);
+                  <br>
+                  Pe. Antônio Vieira (sermão, por meio da retórica).
+                </p>
+                <h1>Principais Características</h1>
+                <p>Fusionismo: Visão medieval + Renascentista.
+                  <br>
+                  Culto ao contraste: oposição de ideias- Antítese e paradoxo
+                  <br>
+                  Pessimismo: postura negativa diante da materialidade.
+                  <br>
+                  Feísmo: imagens desagradáveis.
+                  <br>
+                  Rebuscamento: ornamentação excessiva da linguagem- Hipérbole
+                  <br>
+                  Sinestesia: apelo sensorial.
+                  <br>
+                  Cultismo ou gongorismo: jogo de palavras (sinônimos, antônimos, homônimos, trocadilhos, figuras de
+                  linguagem, hipérbatos).
+                  <br>
+                  Conceptismo ou quevedismo: jogo de ideias (comparações e argumentação engenhosa).
+                  <br>
+                  Morbidez.
+                  <br>
+                  Sentimento de culpa.
+                  <br>
+                  Carpe diem: aproveitar o momento.
+                  <br>
+                  Emprego da medida nova: versos decassílabos.
+                </p>
+                <h1>Principais Temáticas</h1>
+                <p>Fragilidade humana; fugacidade do tempo; crítica à vaidade; contradições do amor. </p>
+
+                <div><img src="Imagens/cardbarroco1.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardbarroco4.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardbarroco2.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardbarroco3.png" class="d-block w-100" alt="..."></div>
+
+                <br><br>
+                <p><a
+                    href="https://brasilescola.uol.com.br/literatura/o-barroco.htm">https://brasilescola.uol.com.br/literatura/o-barroco.htm</a>
+                </p>
+                <br><br>
+                <p><a href="https://www.todamateria.com.br/barroco/">https://www.todamateria.com.br/barroco/</a></p>
+                <br><br>
+                <p><a
+                    href="https://brasilescola.uol.com.br/literatura/o-barroco-no-brasil.htm#:~:text=Fusionismo%3A%20combina%C3%A7%C3%A3o%20da%20vis%C3%A3o%20medieval,ao%20contraste%3A%20oposi%C3%A7%C3%A3o%20de%20ideias">https://brasilescola.uol.com.br/literatura/o-barroco-no-brasil.htm#:~:text=Fusionismo%3A%20combina%C3%A7%C3%A3o%20da%20vis%C3%A3o%20medieval,ao%20contraste%3A%20oposi%C3%A7%C3%A3o%20de%20ideias</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://brasilescola.uol.com.br/literatura/o-barroco.htm#:~:text=No%20Brasil%2C%20o%20Barroco%20(1601,1636%2D1696)%20e%20Pe">https://brasilescola.uol.com.br/literatura/o-barroco.htm#:~:text=No%20Brasil%2C%20o%20Barroco%20(1601,1636%2D1696)%20e%20Pe</a>
+                </p>
+
+
+
+
+                <a href="Exercícios/Questões Barroco (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="timeline-item">
+
+        <div class="desc">
+          <h3>Arcadismo</h3>
+          <p><I>Idealizar, Pastorar, Sonetear</I></p>
+          <img src="Imagens/7.png" alt="Paleta de Cor">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#teste3">
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Romantismo</h3>
+          <p><I>Idealizar, Nacionalizar, Sentimentalizar</I></p>
+          <img src="Imagens/8.png" alt="Apresentação de Trabalho">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#modal7">
+            Saiba Mais
+          </button>
+        </div>
+        <!-- Segunda Modal (Verticalmente centralizada e rolável) -->
+        <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Romantismo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>Introdução</h1>
+                <p>O romantismo é um estilo de época. Apesar de ter surgido na Alemanha, o fato histórico que motivou o
+                  aparecimento desse movimento artístico foi a Revolução Francesa, um acontecimento importante para toda
+                  a Europa. Ele é caracterizado pelo subjetivismo, excesso sentimental, idealização e fuga da realidade.
+                  <br>
+                  Nesse sentido, a poesia romântica brasileira conta com três fases:
+                  <br>
+                  1° geração, indianista e nacionalista;
+                  <br>
+                  2° geração, é ultrarromântica (marcada pelo pessimismo);
+                  <br>
+                  3° geração, caracterizada pela crítica sociopolítica e por uma visão menos idealizada da realidade.
+                </p>
+                <h1>Contexto Histórico</h1>
+                <p>O Romantismo no brasil surge depois da Independência do país, na qual representou grandes mudanças
+                  sociais, culturais e econômicas. Dessa forma, tal escola literária foi influenciada pelas ideias
+                  iluministas da Revolução Francesa (liberdade de pensamento, de comportamento e, inclusive, a liberdade
+                  de amar; além do sentimento nacionalista impulsionado pelas invasões napoleônicas).</p>
+                <h1>Produção Literária</h1>
+                <p>Textos poéticos, romances e teatrais.</p>
+                <h1>Principais Autores</h1>
+                <p>Álvares de Azevedo;
+                  <br>
+                  Castro Alves;
+                  <br>
+                  José de Alencar;
+                <h1>Principais Características</h1>
+                <p>1° GERAÇÃO (Pós- Independência do Brasil): 1836-1852:
+                  <br>
+                  Nacionalista;
+                  <br>
+                  Indianista (exaltação do índio com herói nacional);
+                  <br>
+                  Ufanista (orgulha exageradamente da nação);
+                  <br>
+                  Exaltação da natureza;
+                  <br>
+                  Idealização da mulher, natureza e da nação.
+                  <br><br>
+                  2° GERAÇÃO (Mal do século ou Ultrarromântica): 1853-1869
+                  <br>
+                  Visão ruim do mundo;
+                  <br>
+                  Egocentrismo;
+                  <br>
+                  Pessimismo;
+                  <br>
+                  Dúvida;
+                  <br>
+                  Desilusão;
+                  <br>
+                  Vida Boêmia;
+                  <br>
+                  Exaltação da morte e fuga da realidade (pela morte, sonho, loucura ou pela arte)
+                  <br><br>
+                  3° GERAÇÃO (Candoreira): 1870-1880
+                  <br>
+                  Relato de problemas sociais e abolicionismo da escravatura no Brasil;
+                  <br>
+                  Liberdade.
+                </p>
+
+                <div><img src="Imagens/cardromantismo1.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardromantismo2.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardromantismo3.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardromantismo4.png" class="d-block w-100" alt="..."></div>
+
+                <br><br>
+                <p><a
+                    href="https://brasilescola.uol.com.br/literatura/romantismo.htm">https://brasilescola.uol.com.br/literatura/romantismo.htm</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://www.todamateria.com.br/romantismo-no-brasil/">https://www.todamateria.com.br/romantismo-no-brasil/</a>
+                </p>
+
+                <a href="Exercícios/Questões Romantismo (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Realismo</h3>
+          <p><I>Realidade, Ciência, Crítica</I></p>
+          <img src="Imagens/Realismo.png" alt="Planejamento Escolar">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#teste4">
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Naturalismo</h3>
+          <p><I>Ciência, Objetividade, Evolução</I></p>
+          <img src="Imagens/Naturalismo.png" alt="Planejamento Escolar">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#modal9">
+            Saiba Mais
+          </button>
+        </div>
+        <!-- Segunda Modal (Verticalmente centralizada e rolável) -->
+        <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Naturalismo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>Introdução</h1>
+                <p>O Naturalismo se caracteriza por sua abordagem científica e objetiva da literatura, refletindo a
+                  influência das teorias evolucionistas e das descobertas científicas da época.</p>
+                <h1>Contexto Histórico</h1>
+                <p>O naturalismo surgiu na Europa, no século XIX. O marco de fundação dessa nova estética foi a
+                  publicação do livro A origem das espécies, de Charles Darwin. Esse livro provocou polêmica, pois
+                  contrariava o pensamento que vinha sendo defendido até então, ou seja, o criacionismo.</p>
+                <h1>Produção Literária</h1>
+                <p>Romances.</p>
+                <h1>Principais Autores</h1>
+                <p>Émile Zola;
+                  <br>
+                  Aluísio Azevedo;
+                  <br>
+                  Machado de Assis;
+                  <br>
+                  Raul Pompeia.
+                <h1>Principais Características</h1>
+                <p>Determinismo: O determinismo parte da ideia de que há uma determinação da ação e da vida dos
+                  indivíduos pelo meio (causa e efeito), pelos fatores genéticos, pelo contexto religioso ou por algum
+                  aspecto;
+                  <br>
+                  Visão cientificista: A literatura naturalista busca explicar a natureza humana através de princípios
+                  científicos, havendo como inspiração as teorias de Charles Darwin;
+                  <br>
+                  Objetividade: Abordagem objetiva e descritiva, com detalhamentos precisos sobre os ambientes, os
+                  personagens e suas condições sociais;
+                  <br>
+                  Análise de aspectos negativos da sociedade: Exploram as mazelas da sociedade, como a pobreza, a
+                  criminalidade e a decadência moral, com a intenção de mostrar como essas condições afetam o
+                  comportamento humano;
+                </p>
+
+                <div><img src="Imagens/cardnaturalismo1.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardnaturalismo2.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardnaturalismo3.png" class="d-block w-100" alt="..."></div>
+
+                <br><br>
+                <p><a
+                    href="https://brasilescola.uol.com.br/sociologia/determinismo.htm">https://brasilescola.uol.com.br/sociologia/determinismo.htm</a>
+                </p>
+                <br><br>
+                <p><a
+                    href="https://brasilescola.uol.com.br/literatura/naturalismo-no-brasil.htm">https://brasilescola.uol.com.br/literatura/naturalismo-no-brasil.htm</a>
+                </p>
+
+                <a href="Exercícios/Questões_Naturalismo.pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Parnasianismo/
+            <br>Simbolismo
+          </h3>
+          <p><I>Poesia, Símbolos, Subjetividade, Estética</I></p>
+          <img src="Imagens/Simbolismo.png" alt="Planejamento Escolar">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#teste5">
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+
+
+
+
+      <div class="timeline-item">
+        <div class="desc">
+          <h3>Pré-Modernismo</h3>
+          <p><I>Transição, Crítica, Regionalista</I></p>
+          <img src="Imagens/Pré-Modernismo.png" alt="Planejamento Escolar">
+        </div>
+        <div class="container text-center my-5">
+          <button type="button" class="btn btn-cor" data-bs-toggle="modal" data-bs-target="#moda21">
+            Saiba Mais
+          </button>
+        </div>
+        <!-- Segunda Modal (Verticalmente centralizada e rolável) -->
+        <div class="modal fade" id="moda21" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal2Label">Pré-Modernismo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1>Introdução</h1>
+                <p>Transição entre o Realismo/Naturalismo e o Modernismo, apresentando características que antecipam as
+                  inovações estéticas e temáticas dos modernistas.</p>
+                <h1>Contexto Histórico</h1>
+                <p>É um período da literatura brasileira que se desenvolveu entre o final do século XIX e o início do
+                  século XX, aproximadamente de 1890 a 1922.</p>
+                <h1>Produção Literária</h1>
+                <p>Romance.</p>
+                <h1>Principais Autores</h1>
+                <p>Euclides da Cunha;
+                  <br>
+                  Lima Barreto;
+                  <br>
+                  Monteiro Lobato;
+                  <br>
+                  Augusto dos Anjos;
+                  <br>
+                  Graça Aranha.
+                <h1>Principais Características</h1>
+                <p>Realismo Crítico: Incorpora uma crítica social mais incisiva, com foco nas desigualdades e nas
+                  injustiças sociais.
+                  <br>
+                  Regionalismo: Representação das realidades regionais, especialmente das regiões nordestinas do Brasil,
+                  evidenciando as peculiaridades e problemas locais.
+                  <br>
+                  Prosa Realista e Experimentalismo: A prosa é caracterizada por uma abordagem mais direta e realista da
+                  vida cotidiana, mas também uma busca por novas formas de expressão.
+                  <br>
+                  Questões Sociais: Abordam temas como a pobreza, a corrupção e as dificuldades enfrentadas pelas
+                  classes mais baixas, refletindo uma preocupação com a realidade social e política do país.
+                </p>
+
+                <div><img src="Imagens/cardpremod1.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardpremod2.png" class="d-block w-100" alt="..."></div>
+                <div><img src="Imagens/cardpremod3.png" class="d-block w-100" alt="..."></div>
+
+                <br><br>
+                <p><a
+                    href="https://www.todamateria.com.br/pre-modernismo/">https://www.todamateria.com.br/pre-modernismo/</a>
+                </p>
+
+                <a href="Exercícios/Questões Pré-Modernismo (1).pdf" download="Questões_Naturalismo.pdf" target="_blank">Baixar meu arquivo PDF</a>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <br> <br>
+
+    <footer>
+      <p>&copy; 2024 Todos os direitos reservados. <a href="#">Sobre</a> | <a href="#">Contato</a></p>
+    </footer>
+
+</body>
+
+</html>

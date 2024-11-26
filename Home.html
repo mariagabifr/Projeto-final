@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="Imagens/fora da caixa.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <style>
+        .custom-toggler .navbar-toggler-icon {
+            background-color: #178ca6;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: relative;
+        }
+        .custom-toggler .navbar-toggler-icon::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .custom-toggler .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .divider {
+            border-top: 2px solid #ccc;
+            margin: 30px 0;
+        }
+        footer {
+            background-color: #178ca6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .btn-color {
+          color: #178ca6;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Mover o botão para a esquerda -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Inserir uma imagem no meio da barra -->
+      <img src="Imagens/fora da caixa.png" alt="Logo" class="mx-auto" style="height: 80px;">
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Home.html" >Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Podcast.html">Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-color" href="SobreNós.html">Sobre Nós</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-color" href="" data-bs-toggle="dropdown">
+                  Literatura Brasileira
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item btn-color" href="LinhadoTempo.html">Linha do Tempo</a></li>
+                  <!-- Novo item adicionado -->
+                  <li><a class="dropdown-item btn-color" href="ValorizaçãoCultural.html">Valorização Cultural</a></li>
+              </ul>
+          </li>
+
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
+            <button class="btn-outline-success btn-color" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/Brasil Fora da Caixa (3).png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/Brasil Fora da Caixa (1).png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/Exposição.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/Exposição.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+   <!-- Container com Texto Alinhado à Esquerda e Imagem à Direita -->
+   <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>BEM-VINDOS AO BRASIL FORA DA CAIXA: Explore, Inspire-se e Conquiste! </h2>
+        <p>Olá, sejam bem-vindos ao nosso site de estudos Brasil Fora da Caixa! 
+<br>
+          Neste espaço, vamos explorar a Literatura Brasileira de forma prática e interativa. Descubra como a leitura pode transformar sua vida. Aprender nunca foi tão fácil e envolvente! 
+          <br>
+          Não perca tempo! Comece na Linha do Tempo e embarque nessa jornada 😉 </p>
+      </div>
+      <div class="col-md-6">
+        <img src="Imagens/fora da caixa.png" class="img-fluid" alt="Imagem Descritiva">
+      </div>
+    </div>
+  </div>
+    
+    <!-- Adicionando o elemento de áudio -->
+     <!--<div class="container mt-4 text-center">
+    <audio controls class="my-3">
+      <source src="caminho/para/seu-audio.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>-->
+
+   
+
+<br>
+    <!-- Adicionando os Cards -->
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="Imagens/T01.jpeg" class="card-img-top" alt="Imagem 1">
+            <div class="card-body">
+              <h5 class="card-title">Mirelle Pinheiro Pedro - 3° EM</h5>
+              <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="Imagens/T08.jpeg" class="card-img-top" alt="Imagem 2">
+            <div class="card-body">
+              <h5 class="card-title">Maria Luiza Tavares Mariza- 3° EM</h5>
+              <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="Imagens//T03.jpeg" class="card-img-top" alt="Imagem 3">
+            <div class="card-body">
+              <h5 class="card-title">Murilo Almeida de Lacerda - 3° EM</h5>
+              <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="Imagens/T04.jpeg" class="card-img-top" alt="Imagem 4">
+            <div class="card-body">
+              <h5 class="card-title">Barbara Menoni de Souza Vieira - 3° EM</h5>
+              <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+            </div>
+          </div>
+        </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="Imagens//T10.jpeg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <h5 class="card-title">Lauren Zareski de Oliveira- 3° EM</h5>
+          <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="Imagens//T06.jpeg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <h5 class="card-title">Maria Eduarda da Silva Vicente- 3° EM</h5>
+          <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="Imagens//T05.jpeg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <h5 class="card-title">Júlia Almeida de Lacerda- 3° EM</h5>
+          <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="Imagens//T09.jpeg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <h5 class="card-title">Julia Sales Gonzaga- 3° EM</h5>
+          <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="Imagens//T11.jpeg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <h5 class="card-title">Luiz Filipe de Moraes Lopes- 3° EM</h5>
+          <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="Imagens//T07.jpeg" class="card-img-top" alt="Imagem 3">
+        <div class="card-body">
+          <h5 class="card-title">Maria Vitória Furtin de Goes- 3° EM</h5>
+          <p class="card-text">SESI CE 260- Santa Cruz do Rio Pardo</p>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+<br>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Imagens/depoimento1.png" class="d-block w-100" alt="Depoimento">
+    </div>
+    <div class="carousel-item">
+      <img src="Imagens/depoimento2.png" class="d-block w-100" alt="Depoimento">
+    </div>
+    <div class="carousel-item">
+      <img src="Imagens/depoimento3.png" class="d-block w-100" alt="Depoimento">
+    </div>
+    <div class="carousel-item">
+      <img src="Imagens/depoimento4.png" class="d-block w-100" alt="Depoimento">
+    </div>
+    <div class="carousel-item">
+      <img src="Imagens/depoimento5.png" class="d-block w-100" alt="Depoimento">
+    </div>
+    <div class="carousel-item">
+      <img src="Imagens/depoimento6.png" class="d-block w-100" alt="Depoimento">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    <!-- Container com Título Centralizado e Imagens Circulares -->
+    <div class="container my-5 text-center">
+      <h2 class="mb-4">Patrocinadores</h2>
+      <div class="d-flex justify-content-center">
+        <div class="me-3">
+          <img src="Imagens/canva.png" class="img-fluid rounded-circle" alt="Imagem 1" style="width: 150px; height: 150px;">
+        </div>
+        <div class="me-3">
+          <img src="Imagens/spotfy.png" class="img-fluid rounded-circle" alt="Imagem 2" style="width: 150px; height: 150px;">
+        </div>
+        <div class="me-3">
+          <img src="Imagens/studio code.png" class="img-fluid rounded-circle" alt="Imagem 2" style="width: 150px; height: 150px;">
+        </div>
+        <div class="me-3">
+          <img src="Imagens/bootstrap.png" class="img-fluid rounded-circle" alt="Imagem 2" style="width: 150px; height: 150px;">
+        </div>
+        <div class="me-3">
+          <img src="Imagens/trello.png" class="img-fluid rounded-circle" alt="Imagem 2" style="width: 150px; height: 150px;">
+        </div>
+        <div>
+          <img src="Imagens/photoshop.png" class="img-fluid rounded-circle" alt="Imagem 3" style="width: 150px; height: 150px;">
+        </div>
+      </div>
+    </div>
+</div>
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+
+   <!-- Rodapé -->
+   <footer>
+     <div class="container text-center">
+       <p class="mb-0">© 2024 Sua Empresa. Todos os direitos reservados.</p>
+       <p class="mb-0">
+         <a href="#">Política de Privacidade</a> | 
+         <a href="#">Termos de Serviço</a>
+       </p>
+     </div>
+   </footer>
+
+</body>
+</html>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+

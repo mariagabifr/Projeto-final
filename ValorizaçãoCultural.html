@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="Imagens/fora da caixa.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <style>
+        .custom-toggler .navbar-toggler-icon {
+            background-color: #178ca6;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: relative;
+        }
+        .custom-toggler .navbar-toggler-icon::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .custom-toggler .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 6px;
+            width: 18px;
+            height: 2px;
+            background-color: white;
+            display: block;
+        }
+        .divider {
+            border-top: 2px solid #ccc;
+            margin: 30px 0;
+        }
+        footer {
+            background-color: #178ca6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-wrapper iframe,
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .btn-cor{
+          background-color: #178ca6;
+          color: aliceblue;
+        }
+        .btn-color {
+          color: #178ca6;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Mover o botão para a esquerda -->
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Inserir uma imagem no meio da barra -->
+      <img src="Imagens/fora da caixa.png" alt="Logo" class="mx-auto" style="height: 80px;">
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Home.html" >Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active btn-color" aria-current="page" href="Podcast.html">Podcast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-color" href="SobreNós.html">Sobre Nós</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn-color" href="" data-bs-toggle="dropdown">
+                  Literatura Brasileira
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item btn-color" href="LinhadoTempo.html">Linha do Tempo</a></li>
+                  <!-- Novo item adicionado -->
+                  <li><a class="dropdown-item btn-color" href="ValorizaçãoCultural.html">Valorização Cultural</a></li>
+              </ul>
+          </li>
+
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquise aqui" aria-label="Search">
+            <button class="btn-outline-success btn-color" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>]
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/Afro.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/Cordel.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/Indigena.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Container com Texto Alinhado à Esquerda e Imagem à Direita -->
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Indígena</h2>
+        <p>A literatura indígena é um movimento literário e cultural que busca dar voz e visibilidade às narrativas, histórias e tradições dos povos indígenas, muitas vezes marginalizados e silenciados ao longo da história. Ela não se restringe a um único gênero ou estilo, abarcando poesia, prosa, narrativas orais e escritas, além de ensaios e manifestos. Esse tipo de literatura é uma forma de resistência e preservação cultural, proporcionando uma plataforma para os povos indígenas contarem suas próprias histórias a partir de suas perspectivas únicas. </p>
+        <a href="Indigena.html" class="btn btn-cor">Saiba Mais</a>
+      </div>
+      <div class="col-md-6">
+        <img src="Imagens/imagemindigena" class="img-fluid" alt="Imagem Descritiva">
+      </div>
+    </div>
+  </div>
+
+  <!--Container com Texto Alinhado a Direita e Imagem a Esquerda-->
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="Imagens/BandeiraBrasil" class="img-fluid" alt="Imagem Descritiva">
+      </div>
+      <div class="col-md-6">
+        <h2>Regiões do Brasil</h2>
+        <p>O Brasil é um país diversificado tanto em cultura, quanto em literatura, sendo assim cada região tem sua própria forma de escrever.</p>
+        <a href="regioes.html" class="btn btn-cor">Saiba Mais</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container com Texto Alinhado à Esquerda e Imagem à Direita -->
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Afro-Brasileira</h2>
+        <p>A literatura afro-brasileira, que só recentemente começou a se afirmar, foca na realidade da pessoa negra e é produzida por autores afrodescendentes. Temas recorrentes incluem a cultura e a linguagem afro-brasileiras, com um público-alvo afro-brasileiro.</p>
+        <a href="afro.html" class="btn btn-cor">Saiba Mais</a>
+      </div>
+      <div class="col-md-6">
+        <img src="Imagens/afrobrasileira" class="img-fluid" alt="Imagem Descritiva">
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container text-center">
+      <p class="mb-0">© 2024 Sua Empresa. Todos os direitos reservados.</p>
+      <p class="mb-0">
+        <a href="#">Política de Privacidade</a> | 
+        <a href="#">Termos de Serviço</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+  
+
